@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Índice de Massa Corporal</string>
+    <string name="digite_peso">Ex: 65.4.</string>
+    <string name="digite_altura">Ex: 1.73.</string>
+</resources>
