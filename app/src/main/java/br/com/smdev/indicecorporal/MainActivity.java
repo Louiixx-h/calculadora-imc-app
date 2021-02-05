@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -35,17 +36,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcularIMC(View view) {
-        peso = verificarValor(inputPeso);
-        altura = verificarValor(inputAltura);
-
-        if(altura == 0 || altura<0 || peso == 0 || peso<0){
-            inputTextIMC.setText("Use Valores Válidos!");
+        if(verificarValor(inputAltura) == 0 || verificarValor(inputPeso) == 0 ){
+            Toast.makeText(this, "Preencha os campos!", Toast.LENGTH_SHORT).show();
         } else {
-            double imc = peso/(altura*altura);
+            peso = Double.parseDouble(inputPeso.getText().toString());
+            altura = (Double.parseDouble(inputAltura.getText().toString()))/100;
 
-            inputTextIMC.setText(formatter.format(imc));
-            unidadeMedida.setText("Kg/m²");
-            results.setText(classificacao(imc));
+            if (altura == 0 || altura < 0 || peso == 0 || peso < 0) {
+                inputTextIMC.setText("Use Valores Válidos!");
+            } else {
+                double imc = peso / (altura * altura);
+
+                inputTextIMC.setText(formatter.format(imc));
+                unidadeMedida.setText("Kg/m²");
+                results.setText(classificacao(imc));
+            }
         }
     }
 

@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Índice de Massa Corporal</string>
+    <string name="app_name">IMC</string>
     <string name="digite_peso">Ex: 65.4.</string>
-    <string name="digite_altura">Ex: 1.73.</string>
+    <string name="digite_altura">Ex: 173.</string>
+    <string name="titulo">VAMOS DESCOBRIR SEU IMC</string>
+    <string name="imc">IMC</string>
+    <string name="peso">Peso:</string>
+    <string name="altura">Altura:</string>
+    <string name="calcular">CALCULAR</string>
 </resources>
